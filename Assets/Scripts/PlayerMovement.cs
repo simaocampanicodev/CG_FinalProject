@@ -24,10 +24,10 @@ public class PlayerMovement : MonoBehaviour
   {
     Vector3 velocity = new Vector3(
         input.x * moveSpeed,
-        rb.velocity.y,
+        rb.linearVelocity.y,
         input.z * moveSpeed
     );
 
-    rb.velocity = velocity;
+    rb.linearVelocity = velocity;
   }
 }
