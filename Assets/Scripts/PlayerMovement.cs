@@ -3,13 +3,15 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
   [SerializeField] private float moveSpeed = 5f;
+  [SerializeField] private float gravity = -9.81f;
 
-  private Rigidbody rb;
+  private CharacterController controller;
+  private Vector3 velocity;
   private Vector3 input;
 
   private void Awake()
   {
-    rb = GetComponent<Rigidbody>();
+    controller = GetComponent<CharacterController>();
   }
 
   private void Update()
@@ -22,12 +24,9 @@ public class PlayerMovement : MonoBehaviour
 
   private void FixedUpdate()
   {
-    Vector3 velocity = new Vector3(
-        input.x * moveSpeed,
-        rb.linearVelocity.y,
-        input.z * moveSpeed
-    );
+    controller.Move(input * moveSpeed * Time.fixedDeltaTime);
 
-    rb.linearVelocity = velocity;
+    velocity.y += gravity * Time.fixedDeltaTime;
+    controller.Move(velocity * Time.fixedDeltaTime);
   }
 }
