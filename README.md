@@ -11,6 +11,10 @@ Continuando a pesquisa e procurando por onde começar, encontrei no Unity Discus
 distortion effect. Felizmente alguém respondeu com uma maneira de o fazer usando o URP, que seria usando o Scene Color Shader Graph node. Toda essa explicação está no comentário de como o fazer, e eu, fui experimentar se conseguia seguir esse "passo-a-passo" e
 ver o efeito. O link para o Unity Discussions referido: https://discussions.unity.com/t/how-to-make-a-distorting-effect/250474.
 
-Porém, antes de tudo isso, necessito de criar uma cena que me permita realmente ver esse efeito
+Porém, antes de tudo isso, necessito de criar uma cena que me permita realmente ver esse efeito.
+
+02/01/2026
+
+Decidi mudar um pouco de ideias e usei um PlayerMovement.cs de um projeto antigo para poder progredir com a ideia de fazer uma sala em que o Player vai poder andar, que seja bastante simples e apenas para se verificar o efeito.
 
 _Simão Campaniço a22510616_
