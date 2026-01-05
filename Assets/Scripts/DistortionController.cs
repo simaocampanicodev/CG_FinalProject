@@ -6,9 +6,6 @@ public class DistortionController : MonoBehaviour
 
     private void OnRenderImage(RenderTexture src, RenderTexture dest)
     {
-        if (distortionMaterial != null)
-            Graphics.Blit(src, dest, distortionMaterial);
-        else
-            Graphics.Blit(src, dest);
+        Graphics.Blit(src, dest, distortionMaterial);
     }
 }
